@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "676862767188",
+    "project_id": "sokha-mall",
+    "storage_bucket": "sokha-mall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676862767188:android:170085520230cd48cd3dc1",
+        "android_client_info": {
+          "package_name": "com.sokhamall.anakutdigital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676862767188-um9mhnvef6dja96fbg8vbs0bsa109r3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp-KM8X0rj6R_mQeDEVUPdvUDBtxql9YY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676862767188-um9mhnvef6dja96fbg8vbs0bsa109r3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
