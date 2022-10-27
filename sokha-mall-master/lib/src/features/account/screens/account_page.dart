@@ -4,8 +4,6 @@ import 'package:sokha_mall/src/features/account/bloc/contact/contact_bloc.dart';
 import 'package:sokha_mall/src/features/account/screens/widgets/bonus.dart';
 import 'package:sokha_mall/src/features/account/screens/widgets/investment_wallet_tile.dart';
 import 'package:sokha_mall/src/features/account/screens/widgets/my_favourite_tile.dart';
-import 'package:sokha_mall/src/features/account/screens/widgets/wallet_tile.dart';
-
 import 'package:sokha_mall/src/features/authentication/bloc/index.dart';
 import 'package:sokha_mall/src/features/account/bloc/index.dart';
 import 'package:sokha_mall/src/shared/widgets/login_button.dart';
@@ -58,7 +56,7 @@ class BodyBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey _key = GlobalKey();
-
+    // print(BlocProvider.of<AccountBloc>(context).)
     return SingleChildScrollView(
         child: Column(
       children: [

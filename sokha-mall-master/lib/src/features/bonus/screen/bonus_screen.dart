@@ -18,7 +18,6 @@ class _BonusScreenState extends State<BonusScreen> {
     return Scaffold(
       appBar: AppBar(
         brightness: Brightness.light,
-        // backgroundColor: Theme.of(context).primaryColor,
         elevation: 0,
         centerTitle: true,
         title: Text(
@@ -57,18 +56,22 @@ class _BonusScreenState extends State<BonusScreen> {
               SizedBox(
                 height: 10,
               ),
-              each("Sold Out (Kip)", "9 Kip", width, Colors.blue),
+              each("Sold Out (Kip)", "0 Kip", width,
+                  Theme.of(context).primaryColor, 'assets/icons/box.png'),
               SizedBox(
                 height: 10,
               ),
-              each("Recive Bonus", "${7.5 * 9}\$", width, Colors.yellow.shade800),
+              each("Recive Bonus", "${0.00}\$", width,
+                  Theme.of(context).primaryColor, 'assets/icons/gift.png'),
               SizedBox(
                 height: 10,
               ),
-              each("Recive Salary", "${0.00}\$", width, Colors.blue),
+              each("Recive Salary", "${0.00}\$", width,
+                  Theme.of(context).primaryColor, 'assets/icons/money.png'),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
+              money(),
             ],
           ),
         ),
@@ -76,29 +79,45 @@ class _BonusScreenState extends State<BonusScreen> {
     );
   }
 
-  Widget each(String text, String righttext, double width, Color color) {
+  Widget each(
+      String text, String righttext, double width, Color color, String image) {
     return Container(
       width: width * 0.95,
       child: Column(
         children: <Widget>[
           Container(
-            height: 40,
+            // height: 50,
             child: Row(
               children: [
                 Expanded(
                     child: Container(
-                  child: Text(
-                    "${text}",
-                    overflow: TextOverflow.ellipsis,
-                    style: myNormalStyle,
-                    textScaleFactor: 1.2,
+                  child: Row(
+                    children: [
+                      Text(
+                        "${text}",
+                        overflow: TextOverflow.ellipsis,
+                        style: myNormalStyle,
+                        textScaleFactor: 1.2,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image(
+                        image: AssetImage(image),
+                        width: 35,
+                        height: 35,
+                      )
+                    ],
                   ),
                 )),
                 Expanded(
                     child: Container(
                   alignment: Alignment.center,
-                  height: 40,
-                  color: Colors.blue.withOpacity(0.1),
+                  height: 45,
+                  // color: Colors.blue.withOpacity(0.1),
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(color: Theme.of(context).primaryColor)),
                   child: Text(
                     righttext,
                     style: TextStyle(
@@ -109,6 +128,46 @@ class _BonusScreenState extends State<BonusScreen> {
               ],
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget money() {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.95,
+      child: Row(
+        children: <Widget>[
+          Expanded(
+              child: Container(
+            child: Row(
+              children: [
+                Text(
+                  "Total amount",
+                  overflow: TextOverflow.ellipsis,
+                  style: myNormalStyle,
+                  textScaleFactor: 1.2,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Image(
+                  image: AssetImage("assets/icons/money-bag.png"),
+                  width: 35,
+                  height: 35,
+                )
+              ],
+            ),
+          )),
+          Expanded(child: Container(
+            alignment: Alignment.center,
+            height: MediaQuery.of(context).size.width * 0.4,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Theme.of(context).primaryColor)
+            ),
+            child: Text("0.00\$", style: TextStyle(fontFamily: 'kh', color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),textScaleFactor: 1.2,),
+          )),
         ],
       ),
     );

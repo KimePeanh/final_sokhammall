@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sokha_mall/src/appLocalizations.dart';
 import 'package:sokha_mall/src/features/bonus/screen/bonus_screen.dart';
 import 'package:sokha_mall/src/features/wallet/screen/wallet_screen.dart';
 import 'package:sokha_mall/src/utils/helper/helper.dart';
@@ -14,12 +15,12 @@ Widget Bonus(context, key) => TextButton(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          ImageIcon(AssetImage('assets/icons/gift.png'), color: Theme.of(context).primaryColor),
+          ImageIcon(AssetImage('assets/icons/gift (1).png'), color: Theme.of(context).primaryColor),
           SizedBox(
             width: 15,
           ),
           Expanded(
-            child: Text("Bonus",
+            child: Text(AppLocalizations.of(context)!.translate('Member'),
                 textScaleFactor: 1,
                 textAlign: TextAlign.start,
                 style: Theme.of(context).textTheme.button

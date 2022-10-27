@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sokha_mall/src/appLocalizations.dart';
 import 'package:sokha_mall/src/features/wallet/screen/wallet_screen.dart';
 import 'package:sokha_mall/src/utils/helper/helper.dart';
 
@@ -20,7 +21,7 @@ Widget wallet(context, key) => TextButton(
             width: 15,
           ),
           Expanded(
-            child: Text("Wallet",
+            child: Text(AppLocalizations.of(context)!.translate("profit_from_invest"),
                 textScaleFactor: 1,
                 textAlign: TextAlign.start,
                 style: Theme.of(context).textTheme.button

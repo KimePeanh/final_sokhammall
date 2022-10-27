@@ -229,9 +229,7 @@ class _SummaryState extends State<Summary> {
                   textScaleFactor: 1.1,
                 ),
               ),
-              onTap: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => ConfirmScreen()));
+              onTap: () {      
                 if (paymentMethodIndexingBloc.state == (-1)) {
                   customDialog(
                       context,
