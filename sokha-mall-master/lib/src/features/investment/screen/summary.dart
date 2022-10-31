@@ -206,7 +206,7 @@ class _SummaryState extends State<Summary> {
                   Container(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        '${widget.total}\$',
+                        '${widget.qty * 1000}\$',
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold),
                         textScaleFactor: 1.4,

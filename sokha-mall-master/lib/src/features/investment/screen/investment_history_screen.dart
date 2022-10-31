@@ -251,4 +251,6 @@ class _InvestmentHistoryScreenState extends State<InvestmentHistoryScreen> {
       ),
     );
   }
+
+  
 }
